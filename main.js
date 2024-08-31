@@ -1,0 +1,4 @@
+function main() {
+  buildDropdowns();
+  applyConditionalFormating();
+}
