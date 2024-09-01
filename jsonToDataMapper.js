@@ -14,6 +14,7 @@ function getCardData(jsonData) {
             card.types.some((type) => type === "Weapon") &&
             card.types.some((type) => type === "2H"),
           isEquip: card.types.some((type) => type === "Equipment"),
+          isHero: card.types.some((type) => type === "Hero")
         };
       })
     )

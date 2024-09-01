@@ -28,6 +28,7 @@ function applyConditionalFormating() {
           is1hWeapon: helperSheetValues[i][2],
           is2hWeapon: helperSheetValues[i][3],
           isEquip: helperSheetValues[i][4],
+          isHero: helperSheetValues[i][5],
         };
       }
     }
@@ -47,10 +48,11 @@ function applyConditionalFormating() {
         (attributes.is1hWeapon && actualCard.quantity >= 2) ||
         (attributes.is2hWeapon && actualCard.quantity >= 1) ||
         (attributes.isEquip && actualCard.quantity >= 1) ||
+        (attributes.isHero && actualCard.quantity >= 1) ||
         actualCard.quantity >= 3
       ) {
         backgroundColor = constants.playsetCompletedColor;
-      } else if (actualCard.quantity == 0) {
+      } else if (actualCard.quantity === 0) {
         backgroundColor = constants.wantCardsColor;
       }
     }

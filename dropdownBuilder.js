@@ -15,7 +15,7 @@ function buildCardsNameDropdown(helperSheet, sheet) {
   const jsonCardData = getCardsFromJson();
   const cardData = getCardData(jsonCardData);
 
-  const cardDataRange = helperSheet.getRange(2, 1, cardData.length, 5);
+  const cardDataRange = helperSheet.getRange(2, 1, cardData.length, 6);
   const cardsDropdownRange = sheet.getRange("A2:A");
 
   // Setting card names in helper sheet
@@ -26,6 +26,7 @@ function buildCardsNameDropdown(helperSheet, sheet) {
       card.is1hWeapon,
       card.is2hWeapon,
       card.isEquip,
+      card.isHero
     ])
   );
 
@@ -40,7 +41,7 @@ function buildCardsNameDropdown(helperSheet, sheet) {
 function buildSetAndEditionsDropdown(helperSheet, sheet) {
   const jsonSetData = getSetsFromJson();
   const setData = getSetData(jsonSetData);
-  const setDataRange = helperSheet.getRange(2, 6, setData.length, 1);
+  const setDataRange = helperSheet.getRange(2, 8, setData.length, 1);
   const setDropdownRange = sheet.getRange("C2:C");
 
   // Setting set names in helper sheet
