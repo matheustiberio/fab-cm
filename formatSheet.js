@@ -29,6 +29,7 @@ function applyConditionalFormating() {
           is2hWeapon: helperSheetValues[i][3],
           isEquip: helperSheetValues[i][4],
           isHero: helperSheetValues[i][5],
+          isToken: helperSheetValues[i][6],
         };
       }
     }
@@ -49,6 +50,7 @@ function applyConditionalFormating() {
         (attributes.is2hWeapon && actualCard.quantity >= 1) ||
         (attributes.isEquip && actualCard.quantity >= 1) ||
         (attributes.isHero && actualCard.quantity >= 1) ||
+        (attributes.isToken && actualCard.quantity >= 1) ||
         actualCard.quantity >= 3
       ) {
         backgroundColor = constants.playsetCompletedColor;
