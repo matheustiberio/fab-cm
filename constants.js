@@ -11,7 +11,7 @@ const constants = {
   },
   helperSheetName: "Helper",
   playsetCompletedColor: "#6aab88",
-  wantCardsColor: "#cccc00",
+  wantCardsColor: "#f6a700",
   helperSheetMaxColumns: 7,
   helperSheetSetColumnIndex: 10
 };
